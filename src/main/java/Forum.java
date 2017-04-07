@@ -14,9 +14,28 @@ public class Forum implements IForum {
     private Logger errorLogger;
     private Logger actionLogger;
 
-
     @Override
     public boolean createUser(String username, String password) {
+        return false;
+    }
+
+    @Override
+    public boolean removeUser(String username, String password) {
+        return false;
+    }
+
+    @Override
+    public boolean login(String username, String password) {
+        return false;
+    }
+
+    @Override
+    public boolean deactivateUser(String user) {
+        return false;
+    }
+
+    @Override
+    public boolean activateUser(String user) {
         return false;
     }
 
@@ -24,6 +43,9 @@ public class Forum implements IForum {
     public boolean createSubForum() {
         return false;
     }
+
+    @Override
+    public List<String> getSubForums() {return null; }
 
     @Override
     public boolean addManager(String username) {
@@ -53,5 +75,15 @@ public class Forum implements IForum {
     @Override
     public boolean editPolicy() {
         return false;
+    }
+
+    @Override
+    public List<Message> searchByUser(String user) {
+        return null;
+    }
+
+    @Override
+    public List<Message> searchByContent(String content) {
+        return null;
     }
 }

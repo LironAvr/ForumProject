@@ -1,5 +1,4 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
 
 /**
@@ -16,4 +15,6 @@ public class Group {
     public boolean leaveGroup(User user){
         throw new NotImplementedException();
     }
+
+    public boolean addMessage(String user, String content){ throw new NotImplementedException(); }
 }

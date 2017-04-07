@@ -1,3 +1,5 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.List;
 
 /**
@@ -7,4 +9,12 @@ public class Message {
     String owner;
     String content;
     List<Message> feedbacks;
+
+    public boolean addFeedback(String user, String content){
+        throw new NotImplementedException();
+    }
+
+    public boolean editMessage(String content){
+        throw new NotImplementedException();
+    }
 }
