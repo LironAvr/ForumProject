@@ -1,7 +1,7 @@
 /**
  * Created by lirona on 06/04/2017
  **/
-public interface IForums {
+public interface IForum {
 
     //Users
     public boolean createUser(String username, String password);
