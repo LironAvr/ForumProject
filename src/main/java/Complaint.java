@@ -9,6 +9,12 @@ public class Complaint {
     private Date date;
     private String complaint;
 
+    public Complaint(String user, String complaint){
+        this.user = user;
+        this.complaint = complaint;
+        this.date = null; //TODO: Implement date initiation
+    }
+
     public String getUser(){ return user; }
     public String getComplaint(){ return complaint; }
     public Date getDate(){ return date; }

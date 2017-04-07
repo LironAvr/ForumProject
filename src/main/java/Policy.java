@@ -1,5 +1,4 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
 
 /**
@@ -7,7 +6,7 @@ import java.util.List;
  **/
 public class Policy {
 
-    List<String> rules;
+    List<Rule> rules;
 
-    public boolean addRule(String rule){ throw new NotImplementedException(); }
+    public boolean addRule(Rule.ruleType type, String rule){ throw new NotImplementedException(); }
 }

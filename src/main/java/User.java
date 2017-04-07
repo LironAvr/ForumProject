@@ -9,16 +9,25 @@ import java.util.List;
  **/
 public class User {
 
-    boolean isActive;
-    String username;
-    String password;
-    Date signUpDate;
-    Date banStart;
-    List<User> friends;
-    List<User> pendingRequests;
-    List<Message> messages;
-    List<Thread> threads;
-    List<Group> groups;
+    private boolean isActive;
+    private String username;
+    private String password;
+    private Date signUpDate;
+    private Date banStart;
+    private int messageCounter;
+    private List<User> friends;
+    private List<User> pendingRequests;
+    private List<Message> messages;
+    private List<Thread> threads;
+    private List<Group> groups;
+
+    public User (String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
 
     public boolean changePassword(String oldPassword, String newPassword){
         throw new NotImplementedException();
@@ -53,4 +62,6 @@ public class User {
     public boolean deleteThread(SubForum subForum, Thread thread){
         throw new NotImplementedException();
     }
+
+    public int getMessageCounter() { return messageCounter; }
 }

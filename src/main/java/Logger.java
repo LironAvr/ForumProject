@@ -12,4 +12,6 @@ public class Logger {
     public boolean log(String log){
         throw new NotImplementedException();
     }
+
+    public List<String> getLogs() { return logs; }
 }

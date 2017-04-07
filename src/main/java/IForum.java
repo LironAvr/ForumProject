@@ -13,7 +13,8 @@ public interface IForum {
     public boolean activateUser(String user);
 
     //Sub Forums
-    public boolean createSubForum();
+    public boolean createSubForum(String topic, String moderator);
+    public boolean deleteSubForum(String topic);
     public List<String> getSubForums();
 
     //Manager
@@ -31,4 +32,8 @@ public interface IForum {
     //Search
     public List<Message> searchByUser(String user);
     public List<Message> searchByContent(String content);
+
+    //Info
+    public int getForumCounter();
+    public int getUserMessageCounter(String user);
 }

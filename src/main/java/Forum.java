@@ -1,3 +1,6 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -6,6 +9,7 @@ import java.util.List;
  **/
 public class Forum implements IForum {
 
+    private String name;
     private HashMap<String, User> users;
     private HashMap<String, SubForum> subForums;
     private List<User> managers;
@@ -13,6 +17,12 @@ public class Forum implements IForum {
     private Policy policy;
     private Logger errorLogger;
     private Logger actionLogger;
+    private Date creationDate;
+    public int messageCounter;
+
+    public Forum(String managerUserName, String managerPassword, String forumName){
+
+    }
 
     @Override
     public boolean createUser(String username, String password) {
@@ -40,7 +50,12 @@ public class Forum implements IForum {
     }
 
     @Override
-    public boolean createSubForum() {
+    public boolean createSubForum(String topic, String moderator) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteSubForum(String topic) {
         return false;
     }
 
@@ -86,4 +101,15 @@ public class Forum implements IForum {
     public List<Message> searchByContent(String content) {
         return null;
     }
+
+    @Override
+    public int getForumCounter() {
+        return messageCounter;
+    }
+
+    @Override
+    public int getUserMessageCounter(String user) {
+        throw new NotImplementedException();
+    }
+
 }

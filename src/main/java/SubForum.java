@@ -5,7 +5,8 @@ import java.util.List;
  **/
 public class SubForum implements ISubForum {
 
-    private List<User> moderators;
+    String topic;
+    private List<Moderator> moderators;
     private List<Thread> threads;
 
     @Override
@@ -25,6 +26,5 @@ public class SubForum implements ISubForum {
     public boolean removeThread() {
         return false;
     }
-
 
 }
