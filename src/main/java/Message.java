@@ -10,11 +10,6 @@ public class Message {
     String owner;
     String content;
     LocalDateTime date;
-    List<Message> feedbacks;
-
-    public boolean addFeedback(String user, String content){
-        throw new NotImplementedException();
-    }
 
     public boolean editMessage(String content){
         throw new NotImplementedException();

@@ -4,8 +4,8 @@
 public interface ISubForum {
 
     //Manager
-    public boolean addManager(String username);
-    public boolean removeManager(String username);
+    public boolean addModerator(User user);
+    public boolean removeModerator(String username);
 
     //Threads
     public boolean createThread();

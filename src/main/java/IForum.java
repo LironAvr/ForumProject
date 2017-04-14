@@ -36,4 +36,8 @@ public interface IForum {
     //Info
     public int getForumCounter();
     public int getUserMessageCounter(String user);
+
+    //Loggers
+    public boolean logAction(ForumLog action);
+    public boolean logError(ForumLog error);
 }

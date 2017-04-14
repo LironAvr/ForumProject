@@ -1,7 +1,6 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,8 +12,9 @@ public class Forum implements IForum {
     private String name;
     private HashMap<String, User> users;
     private HashMap<String, SubForum> subForums;
+    private HashMap<String, Group> groups;
     private List<User> managers;
-    private List<Group> groups;
+    //private List<Group> groups;
     private Policy policy;
     private Logger errorLogger;
     private Logger actionLogger;
@@ -111,6 +111,20 @@ public class Forum implements IForum {
     @Override
     public int getUserMessageCounter(String user) {
         throw new NotImplementedException();
+    }
+
+    @Override
+    public boolean logAction(ForumLog action) {
+        if (actionLogger.log(action))
+            return true;
+        else return false;
+    }
+
+    @Override
+    public boolean logError(ForumLog error) {
+        if (errorLogger.log(error))
+            return true;
+        else return false;
     }
 
 }

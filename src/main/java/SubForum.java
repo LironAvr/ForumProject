@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -5,15 +7,25 @@ import java.util.List;
  **/
 public class SubForum implements ISubForum {
 
-    String topic;
+    private String topic;
     private List<Moderator> moderators;
     private List<Thread> threads;
+    private LocalDateTime date;
+
+    public SubForum(String topic, User moderator, int permissions){
+        this.topic = topic;
+        this.moderators = new ArrayList<Moderator>();
+        this.moderators.add(new Moderator(moderator, permissions));
+        this.date = LocalDateTime.now();
+    }
 
     @Override
-    public boolean addManager(String username) { return false; }
+    public boolean addModerator(User user) {
+        return false;
+    }
 
     @Override
-    public boolean removeManager(String username) {
+    public boolean removeModerator(String username) {
         return false;
     }
 

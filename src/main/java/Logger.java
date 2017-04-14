@@ -7,11 +7,11 @@ import java.util.List;
  **/
 public class Logger {
 
-    private List<String> logs;
+    private List<ForumLog> logs;
 
-    public boolean log(String log){
+    public boolean log(ForumLog log){
         throw new NotImplementedException();
     }
 
-    public List<String> getLogs() { return logs; }
+    public List<ForumLog> getLogs() { return logs; }
 }
