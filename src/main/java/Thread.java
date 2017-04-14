@@ -1,4 +1,6 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -9,6 +11,7 @@ public class Thread {
     String owner;
     String content;
     Message message;
+    LocalDateTime date;
 
     public boolean addFeedback(String user, String content){
         throw new NotImplementedException();

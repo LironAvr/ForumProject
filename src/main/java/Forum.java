@@ -1,5 +1,6 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -17,11 +18,11 @@ public class Forum implements IForum {
     private Policy policy;
     private Logger errorLogger;
     private Logger actionLogger;
-    private Date creationDate;
+    private LocalDateTime creationDate;
     public int messageCounter;
 
     public Forum(String managerUserName, String managerPassword, String forumName){
-
+        creationDate = LocalDateTime.now();
     }
 
     @Override

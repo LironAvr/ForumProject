@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -6,16 +7,16 @@ import java.util.Date;
 public class Complaint {
 
     private String user;
-    private Date date;
+    private LocalDateTime date;
     private String complaint;
 
     public Complaint(String user, String complaint){
         this.user = user;
         this.complaint = complaint;
-        this.date = null; //TODO: Implement date initiation
+        this.date = LocalDateTime.now();
     }
 
     public String getUser(){ return user; }
     public String getComplaint(){ return complaint; }
-    public Date getDate(){ return date; }
+    public LocalDateTime getDate(){ return date; }
 }

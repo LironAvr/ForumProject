@@ -1,5 +1,6 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -8,6 +9,7 @@ import java.util.List;
 public class Message {
     String owner;
     String content;
+    LocalDateTime date;
     List<Message> feedbacks;
 
     public boolean addFeedback(String user, String content){

@@ -1,7 +1,6 @@
-import com.sun.tools.corba.se.idl.constExpr.Not;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -10,11 +9,11 @@ import java.util.List;
 public class User {
 
     private boolean isActive;
+    private int messageCounter;
     private String username;
     private String password;
-    private Date signUpDate;
-    private Date banStart;
-    private int messageCounter;
+    private LocalDateTime signUpDate;
+    private LocalDateTime banStart;
     private List<User> friends;
     private List<User> pendingRequests;
     private List<Message> messages;
@@ -24,6 +23,7 @@ public class User {
     public User (String username, String password){
         this.username = username;
         this.password = password;
+        signUpDate = LocalDateTime.now();
     }
 
     public String getUsername() { return username; }

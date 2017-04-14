@@ -1,6 +1,6 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -8,13 +8,13 @@ import java.util.List;
  **/
 public class Moderator extends User {
 
-    Date start;
+    LocalDateTime start;
     List<Complaint> complaints;
     int permissions;
 
     public Moderator(User user, int permissions){
         super(user.getUsername(), user.getPassword());
-        this.start = null; //TODO: implement date
+        this.start = LocalDateTime.now(); //TODO: implement date
         this.permissions = permissions;
     }
 
